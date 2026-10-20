@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Elena Zoghby | AI/ML Engineer in training</title>
+<meta name="description" content="Elena Zoghby, Telecommunications & Computer Engineering student building TinyML, computer vision and LLM projects. Open to AI/ML internships and junior roles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#f9faff;--surface:#ffffff;--text:#0e1530;--muted:#55617f;--line:#e3e8f6;
+  --accent:#3453f0;--accent2:#12b5c9;--glow:rgba(52,83,240,.28);--glow2:rgba(18,181,201,.22);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0b1020;--surface:#121936;--text:#e9edfb;--muted:#9ba8c9;--line:#242d52;
+    --accent:#8aa2ff;--accent2:#43d3e3;--glow:rgba(138,162,255,.30);--glow2:rgba(67,211,227,.20);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0b1020;--surface:#121936;--text:#e9edfb;--muted:#9ba8c9;--line:#242d52;
+  --accent:#8aa2ff;--accent2:#43d3e3;--glow:rgba(138,162,255,.30);--glow2:rgba(67,211,227,.20);
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:980px;margin:0 auto;padding:0 22px}
+nav{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:6px 22px;padding:20px 0;font-size:.95rem}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--accent)}
+
+.hero{position:relative;padding:28px 0 72px}
+.glow{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.glow i{position:absolute;border-radius:50%;filter:blur(70px)}
+.glow i:nth-child(1){width:380px;height:380px;right:-60px;top:-40px;background:var(--glow)}
+.glow i:nth-child(2){width:300px;height:300px;left:-90px;bottom:-40px;background:var(--glow2)}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+.status{display:inline-flex;align-items:center;gap:10px;font-size:.9rem;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px;margin:0 0 22px}
+.status b{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 10px #22c55e;flex:none}
+h1{font-size:clamp(2.6rem,7vw,4.4rem);line-height:1.02;letter-spacing:-.03em;margin:0 0 16px;font-weight:700}
+.lead{font-size:clamp(1.2rem,2.6vw,1.5rem);line-height:1.35;margin:0 0 14px;font-weight:500;max-width:30ch}
+.sub{color:var(--muted);margin:0 0 28px;max-width:52ch}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;text-decoration:none;font-weight:600;font-size:.98rem;padding:11px 20px;border-radius:10px;border:1px solid var(--line);background:var(--surface);transition:box-shadow .2s,border-color .2s}
+.btn:hover{border-color:var(--accent);box-shadow:0 0 22px var(--glow)}
+.btn.main{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] .btn.main{color:#0b1020}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn.main{color:#0b1020}}
+.photo{width:196px;height:196px;border-radius:50%;padding:5px;background:linear-gradient(140deg,var(--accent),var(--accent2));box-shadow:0 0 70px var(--glow),0 0 30px var(--glow2)}
+.photo img{display:block;width:100%;height:100%;border-radius:50%;object-fit:cover;border:4px solid var(--bg)}
+
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(1.7rem,4vw,2.2rem);letter-spacing:-.02em;margin:0 0 30px;line-height:1.15}
+.proj{display:grid;grid-template-columns:210px 1fr;gap:12px 40px;padding:34px 0;border-top:1px solid var(--line)}
+.proj:first-of-type{border-top:0;padding-top:0}
+.res .n{font-size:2.9rem;font-weight:700;letter-spacing:-.03em;line-height:1;color:var(--accent);text-shadow:0 0 28px var(--glow)}
+.res .l{color:var(--muted);font-size:.92rem;margin-top:8px;line-height:1.35}
+h3{font-size:1.4rem;line-height:1.2;margin:0 0 4px;letter-spacing:-.01em}
+.kick{color:var(--muted);font-size:.93rem;margin:0 0 12px}
+.proj p{margin:0 0 14px;max-width:62ch}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:4px 0 16px;font-size:.88rem}
+.flow span{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:4px 10px}
+.flow em{font-style:normal;color:var(--accent)}
+.tech{color:var(--muted);font-size:.92rem;margin:0 0 14px}
+.links{display:flex;flex-wrap:wrap;gap:8px 22px;font-weight:600;font-size:.96rem}
+.links a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
+.links a:hover{border-bottom-color:var(--accent)}
+
+.row{display:grid;grid-template-columns:210px 1fr;gap:6px 40px;padding:0 0 26px}
+.row:last-child{padding-bottom:0}
+.row .d{color:var(--muted);font-size:.93rem}
+.row h3{font-size:1.15rem}
+.row p{margin:6px 0 0;max-width:62ch}
+.about p{max-width:62ch;margin:0 0 16px}
+.skills{display:grid;grid-template-columns:210px 1fr;gap:10px 40px;margin-top:28px}
+.skills dt{color:var(--muted);font-size:.93rem}
+.skills dd{margin:0}
+.cta{text-align:left}
+.cta p{max-width:52ch;margin:0 0 24px}
+footer{padding:28px 0 36px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+@media (max-width:760px){
+  .hero .wrap{grid-template-columns:1fr}
+  .photo{order:-1;width:150px;height:150px}
+  .proj,.row,.skills{grid-template-columns:1fr}
+  .res{display:flex;align-items:baseline;gap:12px}
+  .res .l{margin:0}
+  .row .d{margin-bottom:0}
+}
+button.btn{font:inherit;font-weight:600;font-size:.98rem;color:inherit;cursor:pointer}
+.note{margin:12px 0 0;font-size:.92rem;color:var(--muted);min-height:1.4em;user-select:all}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <nav aria-label="Sections">
+    <a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#about">About</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<div class="hero">
+  <div class="glow" aria-hidden="true"><i></i><i></i></div>
+  <div class="wrap">
+    <div>
+      <p class="status"><b></b>Graduating 2027. Open to AI/ML internships and junior roles, including remote.</p>
+      <h1>Elena Zoghby</h1>
+      <p class="lead">I build AI that runs on real hardware and ships as real products.</p>
+      <p class="sub">Telecommunications &amp; Computer Engineering student at the Lebanese University, based in Lebanon. I work across TinyML, computer vision, and LLM applications.</p>
+      <div class="btns">
+        <a class="btn main" href="https://www.linkedin.com/in/elena-zoghby-101a1629b/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/Elena-Zoghby" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="Elena-Zoghby-CV.pdf" download>Download CV</a>
+        <a class="btn" href="mailto:elenazoghby7@gmail.com">Email me</a>
+      </div>
+    </div>
+    <div class="photo"><img src="data:image/jpeg;base64,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" alt="Elena Zoghby" width="186" height="186"></div>
+  </div>
+</div>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+
+    <article class="proj">
+      <div class="res"><div class="n">80.34%</div><div class="l">accuracy, within 0.06 points of the full model</div></div>
+      <div>
+        <h3>Early-exit inference for RepViT</h3>
+        <p class="kick">Capstone of the LebNet AI Fellowship</p>
+        <p>I reproduced RepViT (CVPR 2024) and added an early-exit mechanism. When the penultimate stage is confident enough, judged by its softmax output, the network skips the final stage. It skipped that stage on about 17% of inputs with almost no accuracy loss.</p>
+        <div class="flow" aria-label="Pipeline"><span>Input</span><em>→</em><span>Penultimate stage</span><em>→</em><span>Confident enough?</span><em>→</em><span>Yes: output now</span><span>No: run final stage</span></div>
+        <p class="tech">Deep learning, computer vision, model optimization</p>
+        <div class="links"><a href="https://github.com/Elena-Zoghby/RepViT-Extension" target="_blank" rel="noopener">View on GitHub</a></div>
+      </div>
+    </article>
+
+    <article class="proj">
+      <div class="res"><div class="n">90.8%</div><div class="l">validation accuracy, running on a microcontroller</div></div>
+      <div>
+        <h3>Hand gesture recognition on an ESP32-CAM</h3>
+        <p class="kick">University project, supervised by Prof. Wassim Falou and Prof. Mayssa Hajar</p>
+        <p>An end-to-end TinyML system: a custom CNN, quantized to INT8 and deployed with TensorFlow Lite Micro. It recognizes six gestures plus a “no gesture” class and plays matching audio through a Python app. I captured 7,000+ images over three phases and kept a curated set of 2,000. Models that scored 94–96% in validation did worse on the actual device, so I shipped the one that performed best in real tests.</p>
+        <div class="flow" aria-label="Pipeline"><span>ESP32-CAM</span><em>→</em><span>INT8 CNN on device</span><em>→</em><span>Serial</span><em>→</em><span>Python app</span><em>→</em><span>Audio</span></div>
+        <p class="tech">TinyML, TensorFlow Lite Micro, CNNs, Python</p>
+        <div class="links"><a href="https://github.com/Elena-Zoghby/Hand-Gesture-Recognition---ESP32-CAM" target="_blank" rel="noopener">View on GitHub</a></div>
+      </div>
+    </article>
+
+    <article class="proj">
+      <div class="res"><div class="n">Gold</div><div class="l">rating at the Kanz AI Hackathon, LAU</div></div>
+      <div>
+        <h3>Sign Safe, a job offer checker</h3>
+        <p class="kick">Built solo during the hackathon, July 2026</p>
+        <p>Paste a job offer and Sign Safe flags risky contract terms as low, medium, or high severity, then benchmarks the pay against industry norms. It’s a screening aid, not legal advice.</p>
+        <div class="flow" aria-label="Pipeline"><span>Job offer</span><em>→</em><span>LLM analysis (Groq)</span><em>→</em><span>Risk flags by severity</span><em>→</em><span>Pay benchmark</span></div>
+        <p class="tech">LLM integration, Groq API, Lovable</p>
+        <div class="links"><a href="https://sign-safebuddy.lovable.app/" target="_blank" rel="noopener">Try the live app</a><a href="https://github.com/Elena-Zoghby/sign-safe" target="_blank" rel="noopener">View on GitHub</a></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <div class="row">
+      <div class="d">June to August 2026<br>Remote</div>
+      <div><h3>AI Fellowship Program, LebNet</h3><p>Graduated with High Distinction. Covered ML foundations, transformers, LLM fine-tuning, agents, and RAG, then completed the RepViT early-exit capstone above.</p></div>
+    </div>
+    <div class="row">
+      <div class="d">February to March 2026<br>Remote</div>
+      <div><h3>Full Stack Development Intern and Team Lead, TechTalks</h3><p>Led the development of a Smart Expense Tracker web application, including backend logic, UI components, and database integration.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="recognition">
+  <div class="wrap">
+    <h2>Recognition</h2>
+    <div class="row">
+      <div class="d">July 2026</div>
+      <div><h3>Kanz AI Hackathon, Lebanese American University</h3><p>Gold rating for Sign Safe. Part of the Guinness World Record for the largest AI video lesson, with 14,075 participants.</p></div>
+    </div>
+    <div class="row">
+      <div class="d">24 hours</div>
+      <div><h3>IEEEXtreme programming competition</h3><p>Solved algorithmic problems in Python under time pressure.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <p>I like taking an AI idea all the way to something that works, whether that means collecting my own dataset, fitting a CNN onto a microcontroller, or shipping an LLM app people can try.</p>
+    <p>I’m always working on myself. I’m driven by passion, consistent, and dedicated to finishing what I start.</p>
+    <dl class="skills">
+      <dt>Languages</dt><dd>Python, Java, C#, SQL</dd>
+      <dt>AI and ML</dt><dd>CNNs, computer vision, TinyML, TensorFlow Lite Micro, INT8 quantization, LLM API integration</dd>
+      <dt>Tools</dt><dd>Git and GitHub, VS Code, Visual Studio, Jira, Postman, Notion</dd>
+      <dt>Spoken languages</dt><dd>Arabic and English, fluent in both</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="contact" class="cta">
+  <div class="wrap">
+    <h2>Let’s talk</h2>
+    <p>I’m looking for AI/ML internships and junior roles. Email or LinkedIn is the fastest way to reach me.</p>
+    <div class="btns">
+      <a class="btn main" href="mailto:elenazoghby7@gmail.com">elenazoghby7@gmail.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/elena-zoghby-101a1629b/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/Elena-Zoghby" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© 2026 Elena Zoghby</div></footer>
+</body>
+</html>
